@@ -1,0 +1,79 @@
+@use '../helpers' as *;
+@use '../components' as *;
+
+.header {
+  padding-block: fluid(30, 10);
+  background-color: $color-black;
+
+  border-bottom: $border;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    &-svg {
+      height: 40px;
+      filter: drop-shadow(0 0 5px rgba($color-light, 0.7));
+      font-family: $font-family-base;
+    }
+  }
+
+  &__nav {
+
+    @include tablet {
+      display: none;
+    }
+
+    &-list {
+      display: flex;
+      column-gap: fluid(20, 10);
+      list-style: none;
+    }
+
+    &-link {
+      @fluid-text(18, 16);
+      position: relative;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: rem(1);
+      padding: 0.5rem;
+
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: rem(2);
+        background: $color-accent;
+        transition: $transition;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: fluid(20, 10);
+    align-items: center;
+
+    .header__button--register {
+      @extend %button-contained-accent;
+    }
+    .header__button--login {
+      @extend %button-contained-primary;
+    }
+  }
+
+
+
+}
+
+

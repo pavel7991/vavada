@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/main.scss" />
+    <title>Vavada</title>
+  </head>
+  
+  <body>
+    
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          
+          <a href="/"
+             class="header__logo"
+             aria-label="Vavada Casino"
+          >
+            <svg class="header__logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50">
+              <text x="0" y="35" fill="#fff" font-weight="bold" font-size="36">VAVADA</text>
+              <path d="M0,40 L160,40" stroke="#cf0e48" stroke-width="2" stroke-dasharray="20,5">
+                <animate attributeName="stroke-dashoffset" values="0;215" dur="2s" repeatCount="indefinite"/>
+              </path>
+            </svg>
+          </a>
+          
+          <nav
+            class="header__nav"
+            aria-label="Main Navigation"
+            role="navigation"
+          >
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Home</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Review</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Bonus</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Spins</a>
+              </li>
+            </ul>
+          </nav>
+          
+          <div class="header__buttons">
+            <button
+              class="header__button--register"
+              aria-label="Register"
+              type="button"
+            >
+              Register
+            </button>
+            
+            <button
+              class="header__button--login"
+              aria-label="Login"
+              type="button"
+            >
+              Login
+            </button>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+    </header>
+    
+
+    
+  </body>
+  
+  <script type="module" src="/src/main.js"></script>
+</html>

@@ -1,0 +1,38 @@
+@use './functions' as *;
+@use './media' as *;
+
+// --- Container sizes
+:root {
+  --container-width: #{rem(1280)};
+  --container-padding-x: #{rem(40)};
+
+  @include tablet {
+    --container-padding-x: #{rem(20)};
+  }
+}
+
+// --- Colors ---
+$color-black: #030303;
+$color-dark-10: #101317;
+$color-dark-20: #222;
+
+$color-light: #fff;
+$color-primary: #0ff;
+$color-accent: #cf0e48;
+
+// --- Fonts ---
+$font-family-base: 'Poppins', sans-serif;
+
+
+// ---Transitions ---
+$transition: all 0.3s ease;
+$transition-duration: 0.3s;
+
+// Border
+$border: 2px solid $color-dark-10;
+
+// --- Box Shadows ---
+$box-shadow-accent: 0 3px 20px rgba($color-accent, 0.8);
+
+
+
