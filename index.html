@@ -1,80 +1,299 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="./src/styles/main.scss" />
-    <title>Vavada</title>
-  </head>
-  
-  <body>
-    
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          
-          <a href="/"
-             class="header__logo"
-             aria-label="Vavada Casino"
-          >
-            <svg class="header__logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50">
-              <text x="0" y="35" fill="#fff" font-weight="bold" font-size="36">VAVADA</text>
-              <path d="M0,40 L160,40" stroke="#cf0e48" stroke-width="2" stroke-dasharray="20,5">
-                <animate attributeName="stroke-dashoffset" values="0;215" dur="2s" repeatCount="indefinite"/>
-              </path>
-            </svg>
-          </a>
-          
-          <nav
-            class="header__nav"
-            aria-label="Main Navigation"
-            role="navigation"
-          >
-            <ul class="header__nav-list">
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Home</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Review</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Bonus</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Spins</a>
-              </li>
-            </ul>
-          </nav>
-          
-          <div class="header__buttons">
-            <button
-              class="header__button--register"
-              aria-label="Register"
-              type="button"
-            >
-              Register
-            </button>
-            
-            <button
-              class="header__button--login"
-              aria-label="Login"
-              type="button"
-            >
-              Login
-            </button>
-          </div>
-          
-        </div>
-        
-        
-      </div>
-    </header>
-    
+	<head>
+		<meta charset="UTF-8">
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		>
+		<link
+			rel="stylesheet"
+			href="src/styles/styles.scss"
+		>
+		<title>Vavada</title>
+	</head>
+	
+	<body>
+		
+		<header
+			class="header"
+			data-js-header
+		>
+			<div class="container">
+				<div class="header__inner">
+					<a
+						href="/"
+						class="header__logo"
+						aria-label="Vavada Casino"
+					>
+						<svg
+							class="header__logo-svg"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 160 50"
+						>
+							<text
+								x="0"
+								y="35"
+								fill="#fff"
+								font-weight="bold"
+								font-size="36"
+							>VAVADA
+							</text>
+							<path
+								d="M0,40 L160,40"
+								stroke="#cf0e48"
+								stroke-width="2"
+								stroke-dasharray="20,5"
+							>
+								<animate
+									attributeName="stroke-dashoffset"
+									values="0;215"
+									dur="2s"
+									repeatCount="indefinite"
+								/>
+							</path>
+						</svg>
+					</a>
+					
+					<div
+						class="header__overlay"
+						data-js-header-overlay
+					>
+						<nav
+							class="header__nav"
+							aria-label="Main Navigation"
+						>
+							<ul class="header__nav-list">
+								<li class="header__nav-item">
+									<a
+										href="#"
+										class="header__nav-link"
+									>Home
+									</a>
+								</li>
+								<li class="header__nav-item">
+									<a
+										href="#"
+										class="header__nav-link"
+									>Review
+									</a>
+								</li>
+								<li class="header__nav-item">
+									<a
+										href="#"
+										class="header__nav-link"
+									>Bonus
+									</a>
+								</li>
+								<li class="header__nav-item">
+									<a
+										href="#"
+										class="header__nav-link"
+									>Spins
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					
+					<div class="header__buttons">
+						<button
+							class="header__button--register"
+							aria-label="Register"
+							type="button"
+						>
+							Register
+						</button>
+						
+						<button
+							class="header__button--login"
+							aria-label="Login"
+							type="button"
+						>
+							Login
+						</button>
+					</div>
+					
+					
+					<button
+						class="burger-button"
+						type="button"
+						aria-label="Open Menu"
+						title="Open Menu"
+						data-js-header-burger-button
+					>
+						<span class="burger-button__line"></span>
+						<span class="burger-button__line"></span>
+						<span class="burger-button__line"></span>
+					</button>
+				</div>
+			</div>
+		</header>
+		
+		<main class="main">
+			<section class="main-content">
+				<div class="container">
+					<h1 class="main-content__title">Vavada Casino</h1>
+					<p class="main-content__description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi assumenda cupiditate deserunt dolor dolore dolorem eaque id, ipsum maxime nam nostrum obcaecati perferendis perspiciatis, quisquam quo sit soluta, vitae!
+					</p>
+				</div>
+			</section>
+			
+			<section
+				class="main-banner"
+				aria-label="Banner"
+			>
+				<div class="container">
+					<div class="main-banner__wrapper">
+						<div class="main-banner__content">
+							<h2 class="main-banner__content-title">Free bonus</h2>
+							<button
+								class="main-banner__content-btn"
+								type="button"
+							>Get bonus
+							</button>
+						</div>
+						
+						<div class="main-banner__img-overlay">
+							<picture class="main-banner__picture">
+								<source
+									media="(min-width: 1200px)"
+									srcset="./src/images/banner-desktop.jpg"
+								>
+								<source
+									media="(min-width: 768px)"
+									srcset="./src/images/banner-tablet.jpg"
+								>
+								<img
+									src="./src/images/banner-mobile.jpg"
+									alt="Free bonus at Vavada Casino"
+									loading="lazy"
+									class="main-banner__image"
+								>
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="text-block">
+				<div class="container">
+					<div class="text-block__inner">
+						<h2 class="text-block__title">Lorem ipsum dolor sit amet</h2>
+						<div class="text-block__descriptions">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto distinctio doloribus
+								expedita impedit iure minima modi, natus nemo neque pariatur quaerat sit voluptatem voluptatibus,
+								voluptatum!
+							</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cum dolorem dolores dolorum eos ex,
+								harum impedit incidunt nesciunt nulla omnis pariatur placeat possimus provident quam quas qui sunt voluptas
+								voluptates voluptatum? Aliquid architecto aspernatur atque incidunt laborum qui veritatis.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<div class="particles">
+				<div class="particle-item particle-item--1"></div>
+				<div class="particle-item particle-item--2"></div>
+				<div class="particle-item particle-item--3"></div>
+				<div class="particle-item particle-item--4"></div>
+			</div>
+		</main>
+		
+		
+		<footer class="footer">
+			<div class="footer__top">
+				<div class="container">
+					
+					<div class="footer__top-inner">
+						<a
+							href="/"
+							class="footer__logo"
+						>
+							<img
+								src="./src/images/logo.svg"
+								alt=""
+							>
+						</a>
+						
+						<nav class="footer__nav">
+							<ul class="footer__nav-list">
+								<li class="footer__nav-item">
+									<a
+										href="#"
+										class="footer__nav-link"
+									>Contacts
+									</a>
+								</li>
+								<li class="footer__nav-item">
+									<a
+										href="#"
+										class="footer__nav-link"
+									>Rules
+									</a>
+								</li>
+								<li class="footer__nav-item">
+									<a
+										href="#"
+										class="footer__nav-link"
+									>FAQ
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				
+				</div>
+			</div>
+			
+			<div class="footer__payment">
+				<div class="container">
+					<h2 class="footer__payment-title">Payment methods:</h2>
+					
+					<div class="footer__payment-list">
+						<div class="footer__payment-list">
+							<div class="footer__payment-item">
+								<img
+									src="./src/images/visa.png"
+									class="footer__payment-item-img"
+									alt=""
+								>
+							</div>
+							<div class="footer__payment-item">
+								<img
+									src="./src/images/maestro.png"
+									class="footer__payment-item-img"
+									alt=""
+								>
+							</div>
+							<div class="footer__payment-item">
+								<img
+									src="./src/images/skrill.png"
+									class="footer__payment-item-img"
+									alt=""
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="footer__copyright">
+				<div class="container">
+					<p>Copyright © 2025 vavada.com</p>
+				</div>
+			</div>
+		</footer>
+		
+		<script
+			type="module"
+			src="./src/scripts/main.js"
+		></script>
+	</body>
 
-    
-  </body>
-  
-  <script type="module" src="/src/main.js"></script>
+
 </html>
+
+

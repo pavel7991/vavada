@@ -1,0 +1,63 @@
+@use '../helpers' as *;
+
+.footer {
+  &__top {
+    border-top: $border;
+    padding-block: fluid(15, 10);
+    border-bottom: $border;
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+    height: 40px;
+  }
+
+  &__nav {
+
+    &-list {
+      display: flex;
+      column-gap: fluid(20, 10);
+    }
+  }
+
+  &__payment {
+    padding-block: fluid(30, 10);
+    background-color: $color-dark-20;
+
+    &-title {
+      @include fluid-text(24, 16);
+      color: $color-light-opacity;
+      text-align: center;
+      font-weight: 600;
+      padding-bottom: rem(10);
+    }
+
+    &-list {
+      @include flex-center;
+      column-gap: fluid(15, 10)
+    }
+
+    &-item {
+
+      &-img {
+        height: fluid(50, 40);
+      }
+    }
+  }
+
+  &__copyright {
+    @include fluid-text(14, 12);
+    padding-block: fluid(20, 10);
+    text-align: center;
+    color: $color-light-opacity;
+    border-top: $border;
+    background-color: $color-dark-10;
+  }
+
+}

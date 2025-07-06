@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.text-block {
+  margin-block: $margin-block-section;
+
+  &__inner {
+    padding: rem(30);
+    border-radius: rem(10);
+    background: rgba($color-dark-20, 0.5);
+  }
+
+  &__title {
+    @include visually-hidden;
+  }
+
+  &__description {
+
+  }
+}

@@ -1,0 +1,14 @@
+@use 'normalize';
+@use 'fonts';
+@use 'utils';
+@use 'globals';
+
+@use './blocks/header';
+@use './blocks/burger-button';
+
+@use './blocks/main';
+@use './blocks/banner';
+@use './blocks/text-block';
+@use './blocks/particles';
+
+@use './blocks/footer';
