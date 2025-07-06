@@ -1,12 +1,12 @@
 @use '../helpers' as *;
 
 .burger-button {
-  display: inline-flex;
-  @include square(rem(34));
   z-index: 101;
+  display: inline-flex;
   order: -1;
   flex-direction: column;
   justify-content: space-between;
+  @include square(rem(34));
   padding: rem(8) rem(4);
   color: $color-light;
   background-color: transparent;
@@ -27,9 +27,11 @@
         transform-origin: 0 0;
         translate: 0.25em -0.07em;
       }
+
       &:nth-child(2) {
         rotate: -45deg;
       }
+
       &:last-child {
         width: 0;
       }

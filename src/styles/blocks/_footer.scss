@@ -15,9 +15,8 @@
 
   &__logo {
     display: inline-flex;
-    height: 40px;
 
-    &-img{
+    &-img {
       width: rem(120);
       height: auto;
     }
@@ -49,7 +48,6 @@
     }
 
     &-item {
-
       &-img {
         height: fluid(50, 40);
       }
@@ -64,5 +62,4 @@
     border-top: $border;
     background-color: $color-dark-10;
   }
-
 }

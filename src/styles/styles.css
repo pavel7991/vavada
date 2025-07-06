@@ -208,7 +208,7 @@ svg * {
   --container-width: 80rem;
   --container-padding-x: 2.5rem;
 }
-@media (width <= 48.06125rem) {
+@media (max-width: 48.06125rem) {
   :root {
     --container-padding-x: 1.25rem;
   }
@@ -233,13 +233,13 @@ svg * {
   overflow: hidden !important;
 }
 
-@media (width <= 25.06125rem) {
+@media (max-width: 25.06125rem) {
   .hidden-mobile {
     display: none !important;
   }
 }
 
-@media (width > 25.06125rem) {
+@media (min-width: 25.06125rem) {
   .visible-mobile {
     display: none !important;
   }
@@ -378,6 +378,11 @@ a[aria-label]::before, button[aria-label]::before {
 }
 
 .header {
+  z-index: 99;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding-block: clamp(0.625rem, 0.4959988962rem + 0.5518763797vw, 0.9375rem);
   background-color: #030303;
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
@@ -393,12 +398,12 @@ a[aria-label]::before, button[aria-label]::before {
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
   font-family: "Poppins", sans-serif;
 }
-@media (width > 48.06125rem) {
+@media (min-width: 48.06125rem) {
   .header__overlay {
     display: contents;
   }
 }
-@media (width <= 48.06125rem) {
+@media (max-width: 48.06125rem) {
   .header__overlay {
     z-index: 100;
     position: fixed;
@@ -416,7 +421,7 @@ a[aria-label]::before, button[aria-label]::before {
     translate: -100%;
   }
 }
-@media (width <= 48.06125rem) {
+@media (max-width: 48.06125rem) {
   .header__nav {
     overflow-y: auto;
   }
@@ -426,7 +431,7 @@ a[aria-label]::before, button[aria-label]::before {
   column-gap: clamp(0.625rem, 0.3669977925rem + 1.1037527594vw, 1.25rem);
   list-style: none;
 }
-@media (width <= 48.06125rem) {
+@media (max-width: 48.06125rem) {
   .header__nav-list {
     flex-direction: column;
     align-items: center;
@@ -458,26 +463,26 @@ a[aria-label]::before, button[aria-label]::before {
   column-gap: clamp(0.625rem, 0.3669977925rem + 1.1037527594vw, 1.25rem);
   align-items: center;
 }
-@media (width <= 48.06125rem) {
+@media (max-width: 48.06125rem) {
   .header__buttons {
     flex-grow: 1;
     justify-content: flex-end;
   }
 }
 .burger-button {
-  display: inline-flex;
-  width: 2.125rem;
-  height: 2.125rem;
   z-index: 101;
+  display: inline-flex;
   order: -1;
   flex-direction: column;
   justify-content: space-between;
+  width: 2.125rem;
+  height: 2.125rem;
   padding: 0.5rem 0.25rem;
   color: #fff;
   background-color: transparent;
   border: none;
 }
-@media (width > 48.06125rem) {
+@media (min-width: 48.06125rem) {
   .burger-button {
     display: none;
   }
@@ -515,28 +520,28 @@ a[aria-label]::before, button[aria-label]::before {
 }
 
 .main {
-  flex-grow: 1;
   position: relative;
+  flex-grow: 1;
 }
 .main-content {
   margin-block: clamp(2.5rem, 1.7259933775rem + 3.3112582781vw, 4.375rem);
 }
 .main-content__title {
+  position: relative;
   display: inline-flex;
   left: 50%;
   transform: translateX(-50%);
-  position: relative;
   margin-bottom: clamp(1.25rem, 0.9919977925rem + 1.1037527594vw, 1.875rem);
 }
 .main-content__title::after {
-  content: "";
   position: absolute;
+  content: "";
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: 0.25rem;
   background: linear-gradient(90deg, #cf0e48, #0ff);
-  border-radius: 3px;
+  border-radius: 0.1875rem;
 }
 .main-content__description {
   font-size: 1rem;
@@ -632,13 +637,14 @@ a[aria-label]::before, button[aria-label]::before {
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
 }
+
 .particles {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: 5;
+  top: 0;
+  left: 0;
   pointer-events: none;
   overflow: hidden;
 }
@@ -666,8 +672,6 @@ a[aria-label]::before, button[aria-label]::before {
   animation-delay: 1s;
 }
 .particles .particle-item--4 {
-  width: 4px;
-  height: 4px;
   top: 80%;
   left: 30%;
   animation-delay: 3s;
@@ -701,7 +705,6 @@ a[aria-label]::before, button[aria-label]::before {
 }
 .footer__logo {
   display: inline-flex;
-  height: 40px;
 }
 .footer__logo-img {
   width: 7.5rem;

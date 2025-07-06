@@ -2,9 +2,15 @@
 @use '../components' as *;
 
 .header {
+  z-index: 99;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding-block: fluid(15, 10);
   background-color: $color-black;
   border-bottom: $border;
+
 
   &__inner {
     display: flex;
@@ -48,6 +54,7 @@
     @include tablet {
       overflow-y: auto;
     }
+
     &-list {
       display: flex;
       column-gap: fluid(20, 10);
@@ -66,7 +73,6 @@
       font-weight: 600;
       letter-spacing: rem(1);
       padding: 0.5rem;
-
 
       &::after {
         content: '';
