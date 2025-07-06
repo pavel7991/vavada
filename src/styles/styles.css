@@ -208,7 +208,7 @@ svg * {
   --container-width: 80rem;
   --container-padding-x: 2.5rem;
 }
-@media (max-width: 48.06125rem) {
+@media (width <= 48.06125rem) {
   :root {
     --container-padding-x: 1.25rem;
   }
@@ -233,13 +233,13 @@ svg * {
   overflow: hidden !important;
 }
 
-@media (max-width: 25.06125rem) {
+@media (width <= 25.06125rem) {
   .hidden-mobile {
     display: none !important;
   }
 }
 
-@media (min-width: 25.06125rem) {
+@media (width > 25.06125rem) {
   .visible-mobile {
     display: none !important;
   }
@@ -393,12 +393,12 @@ a[aria-label]::before, button[aria-label]::before {
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
   font-family: "Poppins", sans-serif;
 }
-@media (min-width: 48.06125rem) {
+@media (width > 48.06125rem) {
   .header__overlay {
     display: contents;
   }
 }
-@media (max-width: 48.06125rem) {
+@media (width <= 48.06125rem) {
   .header__overlay {
     z-index: 100;
     position: fixed;
@@ -416,7 +416,7 @@ a[aria-label]::before, button[aria-label]::before {
     translate: -100%;
   }
 }
-@media (max-width: 48.06125rem) {
+@media (width <= 48.06125rem) {
   .header__nav {
     overflow-y: auto;
   }
@@ -426,7 +426,7 @@ a[aria-label]::before, button[aria-label]::before {
   column-gap: clamp(0.625rem, 0.3669977925rem + 1.1037527594vw, 1.25rem);
   list-style: none;
 }
-@media (max-width: 48.06125rem) {
+@media (width <= 48.06125rem) {
   .header__nav-list {
     flex-direction: column;
     align-items: center;
@@ -458,7 +458,7 @@ a[aria-label]::before, button[aria-label]::before {
   column-gap: clamp(0.625rem, 0.3669977925rem + 1.1037527594vw, 1.25rem);
   align-items: center;
 }
-@media (max-width: 48.06125rem) {
+@media (width <= 48.06125rem) {
   .header__buttons {
     flex-grow: 1;
     justify-content: flex-end;
@@ -477,7 +477,7 @@ a[aria-label]::before, button[aria-label]::before {
   background-color: transparent;
   border: none;
 }
-@media (min-width: 48.06125rem) {
+@media (width > 48.06125rem) {
   .burger-button {
     display: none;
   }
@@ -702,6 +702,10 @@ a[aria-label]::before, button[aria-label]::before {
 .footer__logo {
   display: inline-flex;
   height: 40px;
+}
+.footer__logo-img {
+  width: 7.5rem;
+  height: auto;
 }
 .footer__nav-list {
   display: flex;

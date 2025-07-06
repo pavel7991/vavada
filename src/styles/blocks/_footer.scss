@@ -16,6 +16,11 @@
   &__logo {
     display: inline-flex;
     height: 40px;
+
+    &-img{
+      width: rem(120);
+      height: auto;
+    }
   }
 
   &__nav {

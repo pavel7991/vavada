@@ -5,37 +5,37 @@ $tablet: 768.98;
 $mobile: 400.98;
 
 @mixin laptop-above {
-  @media (min-width: #{rem($laptop)}) {
+  @media (width > #{rem($laptop)}) {
     @content;
   }
 }
 
 @mixin laptop {
-  @media (max-width: #{rem($laptop)}) {
+  @media (width <= #{rem($laptop)}) {
     @content;
   }
 }
 
 @mixin tablet-above {
-  @media (min-width: #{rem($tablet)}) {
+  @media (width > #{rem($tablet)}) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (max-width: #{rem($tablet)}) {
+  @media (width <= #{rem($tablet)}) {
     @content;
   }
 }
 
 @mixin mobile-above {
-  @media (min-width: #{rem($mobile)}) {
+  @media (width > #{rem($mobile)}) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media (max-width: #{rem($mobile)}) {
+  @media (width <= #{rem($mobile)}) {
     @content;
   }
 }
